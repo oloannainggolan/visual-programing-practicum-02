@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/> 
+        <attribute name="saved" value="2023-09-30 11:06:40 AM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1MNVY1U1BIRTsyMDIzLTA5LTMwOzEwOjQxOjA2IEFNOzI4MDg="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1MNVY1U1BIRTsyMDIzLTA5LTMwOzExOjA2OjQwIEFNOzI7MjkxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/> 
+        <body>
+            <declare name="kapasitas, jumlah, skor" type="Integer" array="False" size=""/>
+            <declare name="nama, ac, lantai, ketersediaan, status" type="String" array="False" size=""/>
+            <input variable="nama"/>
+            <input variable="kapasitas"/>
+            <input variable="ac"/>
+            <input variable="lantai"/>
+            <input variable="ketersediaan"/>
+            <input variable="jumlah"/>
+            <assign variable="skor" expression="(jumlah/kapasitas)*100"/>
+            <if expression="skor &gt;= 40">
+                <then>
+                    <assign variable="status" expression="&quot;Gudang Elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="skor &gt;= 25">
+                        <then>
+                            <assign variable="status" expression="&quot;Gudang Standar&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="skor &lt; 25">
+                                <then>
+                                    <assign variable="status" expression="&quot;Gudang Perlu Peningkatan&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Informasi Gudang&quot;" newline="True"/>
+            <output expression="nama &amp; &quot;|&quot; &amp;&#13;&#10;kapasitas &amp; &quot;|&quot; &amp;&#13;&#10;jumlah &amp; &quot;|&quot; &amp;&#13;&#10;ac &amp; &quot;|&quot; &amp;&#13;&#10;lantai &amp; &quot;|&quot; &amp;&#13;&#10;ketersediaan &amp; &quot;|&quot; &amp;&#13;&#10;skor &amp; &quot;|&quot; &amp;&#13;&#10;status" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

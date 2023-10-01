@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 02:07:29 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1MNVY1U1BIRTsyMDIzLTA5LTI4OzA4OjI1OjA0IFBNOzI4Mzc="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1MNVY1U1BIRTsyMDIzLTEwLTAxOzAyOjA3OjI5IFBNOzM7MjkzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ANGKA" type="Integer" array="False" size=""/>
+            <declare name="P" type="String" array="False" size=""/>
+            <input variable="ANGKA"/>
+            <input variable="P"/>
+            <if expression="ANGKA &gt;= 3">
+                <then>
+                    <assign variable="P" expression="&quot;PENTING&quot;"/>
+                </then>
+                <else>
+                    <if expression="ANGKA &lt; 3 &amp;&amp; ANGKA &gt; 1.5">
+                        <then>
+                            <assign variable="P" expression="&quot;MENENGGAH&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="ANGKA &lt; 1.5">
+                                <then>
+                                    <assign variable="P" expression="&quot;AKHIR&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="P" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
